@@ -10,6 +10,7 @@ import Sponsors from "@/components/home/Sponsors";
 import Footer from "@/components/layout/Footer";
 import Schedule from "@/components/home/Schedule";
 import Stats from "@/components/home/Stats";
+import Faq from "@/components/home/Faq";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
   <Navbar />
   <Hero />
   <Stats />
+  <EventInfo />
   <Countdown />
   <About />
   <Distances />
@@ -24,6 +26,7 @@ export default function Home() {
   <Gallery />
   <Schedule />
   <Sponsors />
+  <Faq />
   <Footer />
 </main>
   );

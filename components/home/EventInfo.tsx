@@ -1,43 +1,53 @@
 export default function EventInfo() {
-  const items = [
-    {
-      icon: "📅",
-      title: "Fecha",
-      value: "07 Febrero 2027",
-    },
-    {
-      icon: "📍",
-      title: "Lugar",
-      value: "Viedma → El Cóndor",
-    },
-    {
-      icon: "🏊",
-      title: "Distancias",
-      value: "T100 y Short",
-    },
-    {
-      icon: "📝",
-      title: "Inscripción",
-      value: "Online",
-    },
-  ];
-
   return (
-    <section className="bg-cyan-500 text-slate-950">
-      <div className="mx-auto grid max-w-7xl gap-8 px-6 py-8 md:grid-cols-4">
-        {items.map((item) => (
-          <div key={item.title} className="text-center">
-            <div className="text-4xl">{item.icon}</div>
+    <section className="bg-slate-950 py-24 text-white">
+      <div className="mx-auto max-w-6xl px-6">
 
-            <h3 className="mt-3 font-bold uppercase">
-              {item.title}
+        <div className="text-center">
+          <p className="uppercase tracking-[0.3em] text-cyan-400 font-semibold">
+            Información
+          </p>
+
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+            Todo lo que necesitás saber
+          </h2>
+        </div>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+
+          <div className="rounded-2xl bg-slate-900 p-8 border border-slate-800">
+            <h3 className="text-2xl font-bold text-cyan-400">
+              📍 Lugar
             </h3>
 
-            <p className="mt-2 font-medium">
-              {item.value}
+            <p className="mt-4 text-gray-300">
+              Largada en Viedma y llegada en el Balneario El Cóndor,
+              recorriendo uno de los paisajes más emblemáticos de Río Negro.
             </p>
           </div>
-        ))}
+
+          <div className="rounded-2xl bg-slate-900 p-8 border border-slate-800">
+            <h3 className="text-2xl font-bold text-cyan-400">
+              🗓 Fecha
+            </h3>
+
+            <p className="mt-4 text-gray-300">
+              Domingo 7 de febrero de 2027.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-slate-900 p-8 border border-slate-800">
+            <h3 className="text-2xl font-bold text-cyan-400">
+              🏆 Modalidades
+            </h3>
+
+            <p className="mt-4 text-gray-300">
+              Distancia T100 y Short, con categorías por edades y premiación.
+            </p>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
