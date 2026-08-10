@@ -1,51 +1,162 @@
+"use client";
+
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <header className="fixed top-0 z-50 w-full bg-slate-950/80 backdrop-blur border-b border-slate-800">
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
+        {/* Logo */}
         <a
           href="/"
-          className="text-2xl font-extrabold text-cyan-400"
+          className="text-xl font-extrabold tracking-tight text-cyan-400 md:text-2xl"
+          onClick={closeMenu}
         >
           TRIA DE LA COSTA
         </a>
 
-        <nav className="hidden gap-8 md:flex">
+        {/* Menú escritorio */}
+        <nav className="hidden items-center gap-7 md:flex">
 
-          <a href="#evento" className="hover:text-cyan-400 transition">
+          <a
+            href="#evento"
+            className="transition hover:text-cyan-400"
+          >
             El desafío
           </a>
 
-          <a href="#distancias" className="hover:text-cyan-400 transition">
+          <a
+            href="#distancias"
+            className="transition hover:text-cyan-400"
+          >
             Distancias
           </a>
 
-          <a href="#recorrido" className="hover:text-cyan-400 transition">
+          <a
+            href="#recorrido"
+            className="transition hover:text-cyan-400"
+          >
             Recorrido
           </a>
 
-          <a href="#galeria" className="hover:text-cyan-400 transition">
+          <a
+            href="#galeria"
+            className="transition hover:text-cyan-400"
+          >
             Galería
           </a>
 
-          <a href="#cronograma" className="hover:text-cyan-400 transition">
+          <a
+            href="#cronograma"
+            className="transition hover:text-cyan-400"
+          >
             Cronograma
           </a>
 
-          <a href="#sponsors" className="hover:text-cyan-400 transition">
+          <a
+            href="#sponsors"
+            className="transition hover:text-cyan-400"
+          >
             Sponsors
           </a>
 
           <a
             href="/inscripciones"
-            className="rounded-lg bg-cyan-500 px-4 py-2 font-semibold hover:bg-cyan-400 transition"
+            className="rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-slate-950 transition hover:bg-cyan-400"
           >
             Inscribite
           </a>
 
         </nav>
 
+        {/* Botón menú móvil */}
+        <button
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="rounded-lg p-2 text-white transition hover:bg-white/10 md:hidden"
+          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
       </div>
+
+      {/* Menú móvil */}
+      {menuOpen && (
+        <nav className="border-t border-white/10 bg-slate-950 px-6 py-6 md:hidden">
+
+          <div className="flex flex-col gap-5">
+
+            <a
+              href="#evento"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              El desafío
+            </a>
+
+            <a
+              href="#distancias"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Distancias
+            </a>
+
+            <a
+              href="#recorrido"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Recorrido
+            </a>
+
+            <a
+              href="#galeria"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Galería
+            </a>
+
+            <a
+              href="#cronograma"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Cronograma
+            </a>
+
+            <a
+              href="#sponsors"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Sponsors
+            </a>
+
+            <a
+              href="/inscripciones"
+              onClick={closeMenu}
+              className="rounded-lg bg-cyan-500 px-5 py-3 text-center font-semibold text-slate-950 transition hover:bg-cyan-400"
+            >
+              Inscribite
+            </a>
+
+          </div>
+
+        </nav>
+      )}
+
     </header>
   );
 }

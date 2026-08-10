@@ -39,9 +39,17 @@ export default function Distances() {
             </p>
 
             <div className="mt-8 space-y-5 text-lg">
-              <p>🏊 <strong>2 km</strong> Natación</p>
-              <p>🚴 <strong>80 km</strong> Ciclismo</p>
-              <p>🏃 <strong>18 km</strong> Pedestrismo</p>
+              <p>
+                🏊 <strong>2 km</strong> Natación
+              </p>
+
+              <p>
+                🚴 <strong>80 km</strong> Ciclismo
+              </p>
+
+              <p>
+                🏃 <strong>18 km</strong> Pedestrismo
+              </p>
             </div>
 
             <a
@@ -66,9 +74,17 @@ export default function Distances() {
             </p>
 
             <div className="mt-8 space-y-5 text-lg">
-              <p>🏊 <strong>1 km</strong> Natación</p>
-              <p>🚴 <strong>30 km</strong> Ciclismo</p>
-              <p>🏃 <strong>5 km</strong> Pedestrismo</p>
+              <p>
+                🏊 <strong>1 km</strong> Natación
+              </p>
+
+              <p>
+                🚴 <strong>30 km</strong> Ciclismo
+              </p>
+
+              <p>
+                🏃 <strong>5 km</strong> Pedestrismo
+              </p>
             </div>
 
             <a

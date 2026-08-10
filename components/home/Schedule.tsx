@@ -11,7 +11,7 @@ export default function Schedule() {
             Cronograma
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold">
+          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
             Programa del Evento
           </h2>
 
@@ -22,24 +22,32 @@ export default function Schedule() {
 
         <div className="mt-16 space-y-6">
 
-          <div className="flex justify-between rounded-xl bg-slate-800 p-5">
+          <div className="flex flex-col gap-2 rounded-xl bg-slate-800 p-5 md:flex-row md:items-center md:justify-between">
             <span>Entrega de kits</span>
-            <strong>Sábado (Horario a confirmar)</strong>
+            <strong className="text-cyan-400">
+              Sábado — Horario a confirmar
+            </strong>
           </div>
 
-          <div className="flex justify-between rounded-xl bg-slate-800 p-5">
+          <div className="flex flex-col gap-2 rounded-xl bg-slate-800 p-5 md:flex-row md:items-center md:justify-between">
             <span>Apertura del Parque Cerrado</span>
-            <strong>Domingo (Horario a confirmar)</strong>
+            <strong className="text-cyan-400">
+              Domingo — Horario a confirmar
+            </strong>
           </div>
 
-          <div className="flex justify-between rounded-xl bg-slate-800 p-5">
+          <div className="flex flex-col gap-2 rounded-xl bg-slate-800 p-5 md:flex-row md:items-center md:justify-between">
             <span>Largada</span>
-            <strong>07/02/2027</strong>
+            <strong className="text-cyan-400">
+              07/02/2027
+            </strong>
           </div>
 
-          <div className="flex justify-between rounded-xl bg-slate-800 p-5">
+          <div className="flex flex-col gap-2 rounded-xl bg-slate-800 p-5 md:flex-row md:items-center md:justify-between">
             <span>Premiación</span>
-            <strong>Al finalizar la competencia</strong>
+            <strong className="text-cyan-400">
+              Al finalizar la competencia
+            </strong>
           </div>
 
         </div>
