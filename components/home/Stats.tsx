@@ -2,29 +2,29 @@ import { Calendar, Flag, MapPin, Trophy } from "lucide-react";
 
 export default function Stats() {
   return (
-    <section className="bg-slate-900 py-16 text-white">
+    <section className="bg-slate-950 py-20 text-white">
       <div className="mx-auto grid max-w-6xl gap-6 px-6 md:grid-cols-4">
 
-        <Card
-          icon={<Calendar size={36} />}
+        <StatCard
+          icon={<Calendar size={32} />}
           value="07"
           label="Febrero 2027"
         />
 
-        <Card
-          icon={<Flag size={36} />}
+        <StatCard
+          icon={<Flag size={32} />}
           value="2"
           label="Distancias"
         />
 
-        <Card
-          icon={<Trophy size={36} />}
+        <StatCard
+          icon={<Trophy size={32} />}
           value="100"
-          label="Km Recorrido Principal"
+          label="Km de recorrido"
         />
 
-        <Card
-          icon={<MapPin size={36} />}
+        <StatCard
+          icon={<MapPin size={32} />}
           value="Viedma"
           label="→ El Cóndor"
         />
@@ -34,26 +34,28 @@ export default function Stats() {
   );
 }
 
-type CardProps = {
+type StatCardProps = {
   icon: React.ReactNode;
   value: string;
   label: string;
 };
 
-function Card({ icon, value, label }: CardProps) {
+function StatCard({ icon, value, label }: StatCardProps) {
   return (
-    <div className="rounded-2xl bg-slate-800 p-8 text-center">
-      <div className="mb-4 flex justify-center text-cyan-400">
+    <div className="group rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-white/10">
+
+      <div className="mb-4 flex justify-center text-cyan-400 transition duration-300 group-hover:scale-110">
         {icon}
       </div>
 
-      <div className="text-4xl font-bold text-cyan-400">
+      <div className="text-4xl font-black text-white">
         {value}
       </div>
 
-      <p className="mt-2 text-gray-300">
+      <p className="mt-2 text-sm uppercase tracking-wider text-gray-400">
         {label}
       </p>
+
     </div>
   );
 }
