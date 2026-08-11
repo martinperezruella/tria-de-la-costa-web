@@ -11,7 +11,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
@@ -27,13 +27,6 @@ export default function Navbar() {
         <nav className="hidden items-center gap-6 lg:flex">
 
           <a
-            href="/"
-            className="transition hover:text-cyan-400"
-          >
-            Inicio
-          </a>
-
-          <a
             href="/evento"
             className="transition hover:text-cyan-400"
           >
@@ -41,10 +34,10 @@ export default function Navbar() {
           </a>
 
           <a
-            href="/categorias"
+            href="/#distancias"
             className="transition hover:text-cyan-400"
           >
-            Categorías
+            Distancias
           </a>
 
           <a
@@ -52,13 +45,6 @@ export default function Navbar() {
             className="transition hover:text-cyan-400"
           >
             Recorrido
-          </a>
-
-          <a
-            href="/reglamento"
-            className="transition hover:text-cyan-400"
-          >
-            Reglamento
           </a>
 
           <a
@@ -73,6 +59,27 @@ export default function Navbar() {
             className="transition hover:text-cyan-400"
           >
             Cronograma
+          </a>
+
+          <a
+            href="/categorias"
+            className="transition hover:text-cyan-400"
+          >
+            Categorías
+          </a>
+
+          <a
+            href="/reglamento"
+            className="transition hover:text-cyan-400"
+          >
+            Reglamento
+          </a>
+
+          <a
+            href="/#sponsors"
+            className="transition hover:text-cyan-400"
+          >
+            Sponsors
           </a>
 
           <a
@@ -104,14 +111,6 @@ export default function Navbar() {
           <div className="flex flex-col gap-5">
 
             <a
-              href="/"
-              onClick={closeMenu}
-              className="transition hover:text-cyan-400"
-            >
-              Inicio
-            </a>
-
-            <a
               href="/evento"
               onClick={closeMenu}
               className="transition hover:text-cyan-400"
@@ -120,11 +119,11 @@ export default function Navbar() {
             </a>
 
             <a
-              href="/categorias"
+              href="/#distancias"
               onClick={closeMenu}
               className="transition hover:text-cyan-400"
             >
-              Categorías
+              Distancias
             </a>
 
             <a
@@ -133,14 +132,6 @@ export default function Navbar() {
               className="transition hover:text-cyan-400"
             >
               Recorrido
-            </a>
-
-            <a
-              href="/reglamento"
-              onClick={closeMenu}
-              className="transition hover:text-cyan-400"
-            >
-              Reglamento
             </a>
 
             <a
@@ -157,6 +148,30 @@ export default function Navbar() {
               className="transition hover:text-cyan-400"
             >
               Cronograma
+            </a>
+
+            <a
+              href="/categorias"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Categorías
+            </a>
+
+            <a
+              href="/reglamento"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Reglamento
+            </a>
+
+            <a
+              href="/#sponsors"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Sponsors
             </a>
 
             <a
