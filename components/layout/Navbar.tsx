@@ -11,8 +11,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
         <a
@@ -24,48 +24,55 @@ export default function Navbar() {
         </a>
 
         {/* Menú escritorio */}
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
 
           <a
-            href="#evento"
+            href="/"
             className="transition hover:text-cyan-400"
           >
-            El desafío
+            Inicio
           </a>
 
           <a
-            href="#distancias"
+            href="/evento"
             className="transition hover:text-cyan-400"
           >
-            Distancias
+            El evento
           </a>
 
           <a
-            href="#recorrido"
+            href="/categorias"
+            className="transition hover:text-cyan-400"
+          >
+            Categorías
+          </a>
+
+          <a
+            href="/recorrido"
             className="transition hover:text-cyan-400"
           >
             Recorrido
           </a>
 
           <a
-            href="#galeria"
+            href="/reglamento"
+            className="transition hover:text-cyan-400"
+          >
+            Reglamento
+          </a>
+
+          <a
+            href="/#galeria"
             className="transition hover:text-cyan-400"
           >
             Galería
           </a>
 
           <a
-            href="#cronograma"
+            href="/#cronograma"
             className="transition hover:text-cyan-400"
           >
             Cronograma
-          </a>
-
-          <a
-            href="#sponsors"
-            className="transition hover:text-cyan-400"
-          >
-            Sponsors
           </a>
 
           <a
@@ -81,7 +88,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
-          className="rounded-lg p-2 text-white transition hover:bg-white/10 md:hidden"
+          className="rounded-lg p-2 text-white transition hover:bg-white/10 lg:hidden"
           aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={menuOpen}
         >
@@ -92,28 +99,36 @@ export default function Navbar() {
 
       {/* Menú móvil */}
       {menuOpen && (
-        <nav className="border-t border-white/10 bg-slate-950 px-6 py-6 md:hidden">
+        <nav className="border-t border-white/10 bg-slate-950 px-6 py-6 lg:hidden">
 
           <div className="flex flex-col gap-5">
 
             <a
-              href="#evento"
+              href="/"
               onClick={closeMenu}
               className="transition hover:text-cyan-400"
             >
-              El desafío
+              Inicio
             </a>
 
             <a
-              href="#distancias"
+              href="/evento"
               onClick={closeMenu}
               className="transition hover:text-cyan-400"
             >
-              Distancias
+              El evento
             </a>
 
             <a
-              href="#recorrido"
+              href="/categorias"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Categorías
+            </a>
+
+            <a
+              href="/recorrido"
               onClick={closeMenu}
               className="transition hover:text-cyan-400"
             >
@@ -121,7 +136,15 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#galeria"
+              href="/reglamento"
+              onClick={closeMenu}
+              className="transition hover:text-cyan-400"
+            >
+              Reglamento
+            </a>
+
+            <a
+              href="/#galeria"
               onClick={closeMenu}
               className="transition hover:text-cyan-400"
             >
@@ -129,19 +152,11 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#cronograma"
+              href="/#cronograma"
               onClick={closeMenu}
               className="transition hover:text-cyan-400"
             >
               Cronograma
-            </a>
-
-            <a
-              href="#sponsors"
-              onClick={closeMenu}
-              className="transition hover:text-cyan-400"
-            >
-              Sponsors
             </a>
 
             <a
@@ -156,7 +171,6 @@ export default function Navbar() {
 
         </nav>
       )}
-
     </header>
   );
 }
