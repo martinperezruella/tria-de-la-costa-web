@@ -37,7 +37,6 @@ export default function Gallery() {
 
         {/* Encabezado */}
         <div className="text-center">
-
           <p className="font-semibold uppercase tracking-[0.3em] text-cyan-400">
             Galería
           </p>
@@ -50,7 +49,6 @@ export default function Gallery() {
             Conocé algunos de los paisajes y lugares que forman parte
             del desafío TRIA DE LA COSTA.
           </p>
-
         </div>
 
         {/* Galería */}
@@ -63,7 +61,6 @@ export default function Gallery() {
                 index === 0 ? "md:row-span-2" : ""
               }`}
             >
-
               {/* Imagen */}
               <div
                 className={`relative w-full ${
@@ -72,16 +69,11 @@ export default function Gallery() {
                     : "h-72"
                 }`}
               >
-
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes={
-                    index === 0
-                      ? "(max-width: 768px) 100vw, 50vw"
-                      : "(max-width: 768px) 100vw, 50vw"
-                  }
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition duration-700 ease-out group-hover:scale-105"
                 />
 
@@ -93,7 +85,6 @@ export default function Gallery() {
 
                 {/* Contenido */}
                 <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
-
                   <p className="text-xs font-bold uppercase tracking-[0.25em] text-cyan-400">
                     {image.subtitle}
                   </p>
@@ -101,11 +92,8 @@ export default function Gallery() {
                   <h3 className="mt-2 text-2xl font-black text-white md:text-3xl">
                     {image.title}
                   </h3>
-
                 </div>
-
               </div>
-
             </div>
           ))}
 
@@ -113,12 +101,10 @@ export default function Gallery() {
 
         {/* Texto inferior */}
         <div className="mt-12 text-center">
-
           <p className="mx-auto max-w-2xl text-gray-400">
             Un recorrido que comienza en Viedma, atraviesa el Río Negro
             y la Ruta Provincial Nº 1, y termina junto al mar en El Cóndor.
           </p>
-
         </div>
 
       </div>
