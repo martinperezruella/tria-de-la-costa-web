@@ -33,11 +33,9 @@ export default function InscripcionesPage() {
 
       {/* Encabezado */}
       <section className="relative overflow-hidden py-24">
-
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/30 via-slate-950 to-slate-950" />
 
         <div className="relative mx-auto max-w-5xl px-6 text-center">
-
           <p className="font-semibold uppercase tracking-[0.3em] text-cyan-400">
             TRIA DE LA COSTA
           </p>
@@ -50,13 +48,11 @@ export default function InscripcionesPage() {
             Elegí tu distancia y completá el formulario oficial de
             inscripción para participar del evento.
           </p>
-
         </div>
       </section>
 
       {/* Distancias */}
       <section className="pb-24">
-
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-2">
 
           {registrations.map((registration) => (
@@ -69,6 +65,7 @@ export default function InscripcionesPage() {
               }`}
             >
 
+              {/* Distancia destacada */}
               {registration.featured && (
                 <div className="absolute right-6 top-6 rounded-full bg-cyan-500 px-4 py-1 text-xs font-bold uppercase tracking-wide text-slate-950">
                   Principal
@@ -87,6 +84,7 @@ export default function InscripcionesPage() {
                 {registration.description}
               </p>
 
+              {/* Distancias */}
               <div className="mt-8 space-y-4">
                 {registration.distances.map((distance) => (
                   <div
@@ -102,6 +100,7 @@ export default function InscripcionesPage() {
                 ))}
               </div>
 
+              {/* Botón de inscripción */}
               <a
                 href={registration.href}
                 target="_blank"
@@ -119,12 +118,10 @@ export default function InscripcionesPage() {
           ))}
 
         </div>
-
       </section>
 
       {/* Información */}
       <section className="border-t border-white/10 bg-slate-900 py-20">
-
         <div className="mx-auto max-w-3xl px-6 text-center">
 
           <h2 className="text-3xl font-bold">
@@ -155,7 +152,6 @@ export default function InscripcionesPage() {
           </div>
 
         </div>
-
       </section>
 
     </main>
