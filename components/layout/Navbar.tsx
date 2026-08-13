@@ -1,7 +1,7 @@
 "use client";
 
+import { Instagram, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,8 +11,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="border-b border-white/10 bg-slate-950/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 text-white backdrop-blur-md">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
         <a
@@ -82,13 +82,18 @@ export default function Navbar() {
             Sponsors
           </a>
 
+          {/* Instagram */}
           <a
-            href="/#faq"
-            className="transition hover:text-cyan-400"
+            href="https://www.instagram.com/triadelacosta?igsh=bnl6cGpkZGNyZHZ4"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram oficial de TRIA DE LA COSTA"
+            className="flex items-center justify-center rounded-lg p-2 text-white transition hover:bg-white/10 hover:text-cyan-400"
           >
-            FAQ
+            <Instagram size={22} />
           </a>
 
+          {/* Inscripciones */}
           <a
             href="/inscripciones"
             className="rounded-lg bg-cyan-500 px-5 py-2.5 font-semibold text-slate-950 transition hover:bg-cyan-400"
@@ -181,14 +186,19 @@ export default function Navbar() {
               Sponsors
             </a>
 
+            {/* Instagram móvil */}
             <a
-              href="/#faq"
+              href="https://www.instagram.com/triadelacosta?igsh=bnl6cGpkZGNyZHZ4"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={closeMenu}
-              className="transition hover:text-cyan-400"
+              className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 font-semibold transition hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
             >
-              Preguntas frecuentes
+              <Instagram size={22} />
+              <span>Instagram oficial</span>
             </a>
 
+            {/* Inscripciones */}
             <a
               href="/inscripciones"
               onClick={closeMenu}
