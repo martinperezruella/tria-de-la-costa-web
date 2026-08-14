@@ -1,7 +1,7 @@
 "use client";
 
-import { Instagram, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,9 +11,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 text-white backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/90 text-white backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <a
           href="/"
@@ -24,8 +23,7 @@ export default function Navbar() {
         </a>
 
         {/* Menú escritorio */}
-        <nav className="hidden items-center gap-6 lg:flex">
-
+        <nav className="hidden items-center gap-5 lg:flex">
           <a
             href="/evento"
             className="transition hover:text-cyan-400"
@@ -84,13 +82,40 @@ export default function Navbar() {
 
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/triadelacosta?igsh=bnl6cGpkZGNyZHZ4"
+            href="https://www.instagram.com/triadelacosta/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram oficial de TRIA DE LA COSTA"
-            className="flex items-center justify-center rounded-lg p-2 text-white transition hover:bg-white/10 hover:text-cyan-400"
+            className="flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 font-semibold transition hover:border-cyan-400/40 hover:bg-white/5 hover:text-cyan-400"
           >
-            <Instagram size={22} />
+            <svg
+              viewBox="0 0 24 24"
+              className="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <rect
+                width="20"
+                height="20"
+                x="2"
+                y="2"
+                rx="5"
+              />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+
+            <span>Instagram</span>
           </a>
 
           {/* Inscripciones */}
@@ -100,7 +125,6 @@ export default function Navbar() {
           >
             Inscribite
           </a>
-
         </nav>
 
         {/* Botón menú móvil */}
@@ -113,15 +137,12 @@ export default function Navbar() {
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-
       </div>
 
       {/* Menú móvil */}
       {menuOpen && (
         <nav className="border-t border-white/10 bg-slate-950 px-6 py-6 lg:hidden">
-
           <div className="flex flex-col gap-5">
-
             <a
               href="/evento"
               onClick={closeMenu}
@@ -188,13 +209,40 @@ export default function Navbar() {
 
             {/* Instagram móvil */}
             <a
-              href="https://www.instagram.com/triadelacosta?igsh=bnl6cGpkZGNyZHZ4"
+              href="https://www.instagram.com/triadelacosta/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
-              className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 font-semibold transition hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-400"
+              aria-label="Instagram oficial de TRIA DE LA COSTA"
+              className="flex items-center justify-center gap-2 rounded-lg border border-cyan-400/30 px-5 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-400/10"
             >
-              <Instagram size={22} />
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect
+                  width="20"
+                  height="20"
+                  x="2"
+                  y="2"
+                  rx="5"
+                />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+
               <span>Instagram oficial</span>
             </a>
 
@@ -206,9 +254,7 @@ export default function Navbar() {
             >
               Inscribite
             </a>
-
           </div>
-
         </nav>
       )}
     </header>

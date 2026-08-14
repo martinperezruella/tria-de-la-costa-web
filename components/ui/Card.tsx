@@ -1,20 +1,18 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
-type CardProps = {
+interface CardProps {
   title: string;
   children: ReactNode;
   className?: string;
-};
+}
 
-export default function Card({
-  title,
-  children,
-  className = "",
-}: CardProps) {
+export default function Card(props: CardProps) {
   return (
-    <div className={`rounded-2xl border border-white/10 bg-slate-800 p-8 shadow-lg ${className}`}>
-      <h3 className="mb-6 text-2xl font-bold">{title}</h3>
-      {children}
+    <div
+      className={`rounded-2xl border border-white/10 bg-slate-800 p-8 shadow-lg ${props.className ?? ""}`}
+    >
+      <h3 className="mb-6 text-2xl font-bold">{props.title}</h3>
+      {props.children}
     </div>
   );
 }
