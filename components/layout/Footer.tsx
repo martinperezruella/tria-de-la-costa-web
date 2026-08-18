@@ -27,6 +27,44 @@ export default function Footer() {
             <p className="mt-2 text-sm text-gray-500">
               07 de febrero de 2027 · Río Negro · Argentina
             </p>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/triadelacosta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram oficial de TRIA DE LA COSTA"
+              className="mt-7 inline-flex items-center gap-3 rounded-xl border border-cyan-400/30 bg-cyan-400/5 px-5 py-3 font-semibold text-cyan-400 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:bg-cyan-400/10"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect
+                  width="20"
+                  height="20"
+                  x="2"
+                  y="2"
+                  rx="5"
+                />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+
+              <span>Seguinos en Instagram</span>
+            </a>
           </div>
 
           {/* Navegación */}
